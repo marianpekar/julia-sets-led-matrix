@@ -20,5 +20,5 @@ public:
 	Renderer(Canvas* canvas);
 	~Renderer();
 
-	void DrawPoint(int x, int y, uint8_t r, uint8_t g, uint8_t b) const;
+	void DrawPoint(int& x, int& y, uint8_t& r, uint8_t& g, uint8_t& b) const;
 };

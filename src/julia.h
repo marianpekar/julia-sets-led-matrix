@@ -7,7 +7,7 @@ class Julia
 {
 private:
 	Complex current, next, prev, center;
-	double scale = 1.0f;
+	float scale = 1.0f;
 	int iterations = 255;
 	int hueShift = 0;
 
@@ -19,14 +19,14 @@ private:
 
 public:
 	Julia() = default;
-	Julia(double real, double imag, int windowWidth, int windowHeight);
+	Julia(float real, float imag, int windowWidth, int windowHeight);
 	~Julia();
 
-	void MoveReal(double value);
-	void MoveImag(double value);
-	void MoveCenterX(double value);
-	void MoveCenterY(double value);
-	void Zoom(double value);
+	void MoveReal(float value);
+	void MoveImag(float value);
+	void MoveCenterX(float value);
+	void MoveCenterY(float value);
+	void Zoom(float value);
 	void AddHueShift(int value);
 
 	void Calculate();

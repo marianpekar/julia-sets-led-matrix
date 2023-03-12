@@ -3,7 +3,7 @@
 #include <cmath>
 #include <iostream>
 
-Julia::Julia(double real, double imag, int width, int height) {
+Julia::Julia(float real, float imag, int width, int height) {
     current.real = real;
     current.imag = imag;
 
@@ -13,12 +13,12 @@ Julia::Julia(double real, double imag, int width, int height) {
     results = new unsigned char[width * height];
 }
 
-void Julia::MoveReal(double value)       { this->current.real += value;                      changed = true; }
-void Julia::MoveImag(double value)       { this->current.imag += value;                      changed = true; }
-void Julia::MoveCenterX(double value)    { this->center.real += value * 1.0 / this->scale;   changed = true; }
-void Julia::MoveCenterY(double value)    { this->center.imag += value * 1.0 / this->scale;   changed = true; }
-void Julia::Zoom(double value)           { this->scale += value;                             changed = true; }
-void Julia::AddHueShift(int value)       { this->hueShift += value;                          changed = true; }
+void Julia::MoveReal(float value)       { this->current.real += value;                      changed = true; }
+void Julia::MoveImag(float value)       { this->current.imag += value;                      changed = true; }
+void Julia::MoveCenterX(float value)    { this->center.real += value * 1.0 / this->scale;   changed = true; }
+void Julia::MoveCenterY(float value)    { this->center.imag += value * 1.0 / this->scale;   changed = true; }
+void Julia::Zoom(float value)           { this->scale += value;                             changed = true; }
+void Julia::AddHueShift(int value)      { this->hueShift += value;                          changed = true; }
 
 void Julia::Calculate()
 {

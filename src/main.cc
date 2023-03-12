@@ -63,8 +63,8 @@ int main(int argc, char *argv[]) {
 
   julia->Zoom(2.f);
 
-  float move_step = 0.0001f;
-  float zoom_step = 0.01f;
+  const float move_step = 0.0001f;
+  const float zoom_step = 0.01f;
 
   bool running = true;
   while(!interrupt_received && running)
